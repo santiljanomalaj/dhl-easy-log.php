@@ -1,6 +1,18 @@
 <?php
 
 
+@session_start();
+$rootdir="../";
+define("ROOTDIR","../");
+//Verbindung zur Datenbank aufnehmen
+include("fehlermeldungen.inc.php");
+include("../zudb/config.inc.php");
+if(!defined("ADMINROOT")){define("ADMINROOT","");}
+
+include_once(ADMINROOT."../files/funktionen.inc.php");
+include_once(ADMINROOT."../files/importiere_variablen.inc.php");
+include("zugang_okay.inc.php");
+include_once(ROOTDIR."shop/shop_einstellungen_und_texte.inc.php");
 
 $dhl_benutzername="";
 $meldung_ausgeben="";
@@ -98,7 +110,7 @@ $farbe="ffffff";
 		<link rel="stylesheet" type="text/css" href="css/sebuttons.css">
 	</head>
 	<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0">
-		<table border="0" cellpadding="0" cellspacing="0" width="700" style="border-collapse: collapse; font-family:Verdana; font-size:11px; color:#000000; font-weight:normal; text-decoration:none;" bordercolor="#111111" height="75">
+		<table border="0" cellpadding="0" cellspacing="0" width="700" style="border-collapse: collapse;font-family:Verdana; font-size:11px; color:#000000; font-weight:normal; text-decoration:none;" bordercolor="#111111" height="75">
 			<tr>
 				<td height="1" width="561" >
 					<img height="10" src="../images/space2000.gif" alt="" width="15">
@@ -107,7 +119,7 @@ $farbe="ffffff";
 
 			<tr>
 				<td height="26" width="561" background="images/blue_mitte.png">
-					<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family:Verdana; font-size:11px; color:#000000; font-weight: normal; text-decoration: none;" bordercolor="#111111"  width="683">
+					<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;font-family:Verdana; font-size:11px; color:#000000; font-weight: normal; text-decoration: none;" bordercolor="#111111"  width="683">
 						<tr>
 							<td width="399">
 								<p class="admin_tab_ueber">DHL EasyLog</p>
@@ -126,7 +138,7 @@ $farbe="ffffff";
 
 
 
-					<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family:Verdana; font-size:11px; color:#000000; font-weight: normal; text-decoration: none;" bordercolor="#111111" width="680" height="288">
+					<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;font-family:Verdana; font-size:11px; color:#000000; font-weight: normal; text-decoration: none;" bordercolor="#111111" width="680" height="288">
 						<tr>
 							<td width="20" height="13"></td>
 							<td width="660" height="13"></td>
