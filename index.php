@@ -1,18 +1,6 @@
 <?php
 
 
-@session_start();
-$rootdir="../";
-define("ROOTDIR","../");
-//Verbindung zur Datenbank aufnehmen
-include("fehlermeldungen.inc.php");
-include("../zudb/config.inc.php");
-if(!defined("ADMINROOT")){define("ADMINROOT","");}
-
-include_once(ADMINROOT."../files/funktionen.inc.php");
-include_once(ADMINROOT."../files/importiere_variablen.inc.php");
-include("zugang_okay.inc.php");
-include_once(ROOTDIR."shop/shop_einstellungen_und_texte.inc.php");
 
 $dhl_benutzername="";
 $meldung_ausgeben="";
